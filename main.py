@@ -1,32 +1,25 @@
 from selenium import webdriver
-from selenium.webdriver.chrome.service import Service as ChromeService
+from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
 import time
 
 
-driver = webdriver.Chrome()
-driver.get("http://youtube.com")
-title = driver.title
-driver.get("https://www.youtube.com/")
+class Driver:
+    def __init__(self):
+        self.driver = webdriver.Chrome()
 
+    def get_driver(self):
+        self.driver.get("http://youtube.com")
 
-def get_title(title):
-    website_title = []
-    website_title.append(title)
-    for word in website_title:
-        print(word)
+    def title(self):
+       print(self.driver.title())
 
-def search_videos():
-    elem = driver.find_element(By.NAME, "Coding Advice")
-    time.sleep(10)
-    print(elem)
+# def search_videos():
+#     elem = driver.find_element(By.NAME, "Coding Advice")
+#     time.sleep(10)
+#     print(elem)
 
-search_videos()
-    
+# search_videos()
 
-# get_title(title)
-
-
-
-        
+Driver()
