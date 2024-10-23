@@ -10,16 +10,12 @@ class Driver:
         self.driver = webdriver.Chrome()
 
     def get_driver(self):
-        self.driver.get("http://youtube.com")
+        return self.driver.title
 
-    def title(self):
-       print(self.driver.title())
 
-# def search_videos():
-#     elem = driver.find_element(By.NAME, "Coding Advice")
-#     time.sleep(10)
-#     print(elem)
+def get_title():
+    test = Driver()
+    my_title = test.get_driver()
+    print(my_title)
 
-# search_videos()
-
-Driver()
+get_title()
