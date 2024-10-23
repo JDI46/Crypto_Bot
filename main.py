@@ -4,21 +4,39 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
 import time
 
-
+#calls driver to start working
 class Driver:
     def __init__(self):
-        self.driver = webdriver.Chrome()
+        self.driver = None
 
-    def get_driver(self):
-        return self.driver
+    def start_driver(self, driver="chrome"):
+        if not self.driver:
+            if self.driver == "chrome":
+                self.driver == webdriver.Chrome()
+            else:
+                raise ValueError("Invalid Browser")
 
-def get_website():
-    browser = Driver()
-    return browser("https://docs.google.com/document/d/1lX8PWat-ipOWKfJr95QCCmvLM0R6WdnrzL7noaMDJHI/edit?tab=t.0")
-
-get_website()
-
+    def stop_driver(self):
+        if self.driver:
+            self.driver.quit()
+            self.driver = None
     
+    def navigate_url(self, url):
+        if not self.driver:
+            return
+        self.driver.get(url)
+
+    def get_title(self):
+        if not self.driver:
+            return None
+        return self.driver.title
+    
+
+Driver()
+#needs to get website name
+
+
+
 class GetHTML:
     video_data = {}
     def __init__(self, video_html):
