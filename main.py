@@ -10,12 +10,24 @@ class Driver:
         self.driver = webdriver.Chrome()
 
     def get_driver(self):
-        return self.driver.title
+        return self.driver
+
+def get_website():
+    browser = Driver()
+    return browser("https://docs.google.com/document/d/1lX8PWat-ipOWKfJr95QCCmvLM0R6WdnrzL7noaMDJHI/edit?tab=t.0")
+
+get_website()
+
+    
+class GetHTML:
+    video_data = {}
+    def __init__(self, video_html):
+        pass
+
+    def title_html(self):
+        pass
+
+    def looped_data():
+        pass
 
 
-def get_title():
-    test = Driver()
-    my_title = test.get_driver()
-    print(my_title)
-
-get_title()
