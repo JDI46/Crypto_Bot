@@ -19,14 +19,32 @@ class Driver:
 
     def get_title(self):
         self.driver.get('https://www.youtube.com/')
-        title = self.driver.title
         time.sleep(10)
-        print(title)
+        return self.driver
 
     def quit_driver(self):
         return self.driver.quit()
 
 
+
+class SearchWeb:
+    def __init__(self, search_website):
+        self.search_website = search_website
+
+    #pass self to it, then take in a search button object, string
+    def activate_search_button(self):
+        pass
+    
+    #takes in search word parameters after activating previous function
+    #also needs to have a sleep time in order to have enough time to find the words
+    def search_words(self):
+        pass
+
+
+
 driver = Driver()
 title = driver.get_title()
 print(title)
+
+
+find_button = driver.find_eleme
