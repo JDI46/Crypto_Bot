@@ -1,4 +1,5 @@
 from driver_module import Driver
+import time
 # class SearchWeb:
 #     def __init__(self):
 #         self.activate_driver = Driver
@@ -19,5 +20,9 @@ from driver_module import Driver
 #     #also needs to have a sleep time in order to have enough time to find the words
 #     def search_words(self):
 #         pass
-def start():
-    return Driver.start_driver()
+while True:
+    activate = Driver()
+    if activate == True:
+        time.sleep(10)
+        break
+
