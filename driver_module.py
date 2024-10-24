@@ -8,9 +8,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 import time
 
-#calls driver to start working
-
-
+#maybe i need to add object functions to the whole driver then access the methods in a different module, then mutli thread it or async
 class Driver:
     def __init__(self):
         self.driver = webdriver.Chrome()
@@ -21,10 +19,19 @@ class Driver:
         else:
             raise ValueError("Driver doesn't work")
 
-    def get_website(self, url):
-        self.driver.get(url)
+    def get_website(self):
+        #this is hardcoded due to me getting errors from creating and element on the get title call at the bottom
+        #I only want to use youtube for my research question
+        self.driver.get("https://www.youtube.com/")
         time.sleep(10)
         return self.driver
+
+
+    def click_search_buttom(self):
+        website = Driver.get_website()
+        if website == True:
+            #figure out how I need to get the element by ID so I can use it as a search button after the website call
+            element = self.driver.find_element(By=ID, "elem")
     
 
     def quit_driver(self):
@@ -32,24 +39,9 @@ class Driver:
 
 
 
-class SearchWeb:
-    def __init__(self, search_website):
-        self.search_website = search_website
-
-    #pass self to it, then take in a search button object, string
-    def activate_search_button(self):
-        pass     
-    
-    #takes in search word parameters after activating previous function
-    #also needs to have a sleep time in order to have enough time to find the words
-    def search_words(self):
-        pass
 
 
 driver = Driver()
-url = "https://www.youtube.com/"
-title = driver.get_title(url)
+title = driver.get_title()
 print(title)
-
-
 
