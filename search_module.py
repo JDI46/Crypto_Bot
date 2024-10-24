@@ -20,5 +20,4 @@ from driver_module import Driver
 #     def search_words(self):
 #         pass
 def start():
-    return Driver()
-
+    return Driver.start_driver()

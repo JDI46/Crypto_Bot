@@ -32,12 +32,3 @@ class Driver:
 
     def quit_driver(self):
         return self.driver.quit()
-
-
-
-
-
-driver = Driver()
-title = driver.get_title()
-print(title)
-
