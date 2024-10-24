@@ -20,6 +20,7 @@ class Driver:
     def get_title(self):
         self.driver.get('https://www.youtube.com/')
         title = self.driver.title
+        time.sleep(10)
         print(title)
 
     def quit_driver(self):
