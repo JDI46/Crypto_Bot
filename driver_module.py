@@ -27,11 +27,7 @@ class Driver:
         return self.driver
 
 
-    def click_search_buttom(self):
-        website = Driver.get_website()
-        if website == True:
-            #figure out how I need to get the element by ID so I can use it as a search button after the website call
-            element = self.driver.find_element(By=ID, "elem")
+    
     
 
     def quit_driver(self):
