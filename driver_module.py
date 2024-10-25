@@ -20,15 +20,14 @@ class Driver:
         else:
             raise ValueError("Driver doesn't work")
 
-    def get_website(self, url):
+    def get_website(self):
         #this is hardcoded due to me getting errors from creating and element on the get title call at the bottom
         #I only want to use youtube for my research question
-        url = "https://www.youtube.com/"
         try:
-            self.driver.get(url)
+            self.driver.get("https://www.youtube.com/")
             time.sleep(10)
         except:
-            raise ValueError("Time out")
+            raise Exception("Sleep didn't work")
 
             
 
