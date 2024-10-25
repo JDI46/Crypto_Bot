@@ -24,15 +24,12 @@ class Driver:
         #this is hardcoded due to me getting errors from creating and element on the get title call at the bottom
         #I only want to use youtube for my research question
         if self.driver:
-
-            self.driver.get(self.website)
-            self.driver
-            time.sleep(10)
-
+            slow_driver = time.sleep(15)
+            return slow_driver(self.driver.get("https://www.youtube.com/"))
 
     def quit_driver(self):
         return self.driver.quit()
 
 
-website = "https://www.youtube.com/"
-Driver(website)
+# website = "https://www.youtube.com/"
+Driver()
