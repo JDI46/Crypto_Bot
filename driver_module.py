@@ -22,15 +22,15 @@ class Driver:
     def get_website(self):
         #this is hardcoded due to me getting errors from creating and element on the get title call at the bottom
         #I only want to use youtube for my research question
-        while True:
+        if self.driver:
+
             self.driver.get("https://www.youtube.com/")
             time.sleep(10)
-            break
-        return self.driver
-
-
-
+            return self.driver
 
 
     def quit_driver(self):
         return self.driver.quit()
+    
+if __name__ == "__main__":
+    Driver()

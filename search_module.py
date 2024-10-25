@@ -20,9 +20,5 @@ import time
 #     #also needs to have a sleep time in order to have enough time to find the words
 #     def search_words(self):
 #         pass
-while True:
-    activate = Driver()
-    if activate == True:
-        time.sleep(10)
-        break
+print(Driver())
 
