@@ -10,9 +10,9 @@ import time
 
 #maybe i need to add object functions to the whole driver then access the methods in a different module, then mutli thread it or async
 class Driver:
-    def __init__(self, website):
+    def __init__(self):
         self.driver = webdriver.Chrome()
-        self.website = website
+
 
     def start_driver(self):
         if self.driver:
@@ -20,16 +20,23 @@ class Driver:
         else:
             raise ValueError("Driver doesn't work")
 
-    def get_website(self):
+    def get_website(self, url):
         #this is hardcoded due to me getting errors from creating and element on the get title call at the bottom
         #I only want to use youtube for my research question
-        if self.driver:
-            slow_driver = time.sleep(15)
-            return slow_driver(self.driver.get("https://www.youtube.com/"))
+        url = "https://www.youtube.com/"
+        try:
+            self.driver.get(url)
+            time.sleep(10)
+        except:
+            raise ValueError("Time out")
+
+            
 
     def quit_driver(self):
         return self.driver.quit()
 
 
-# website = "https://www.youtube.com/"
-Driver()
+c = Driver()
+c.start_driver()
+c.get_website()
+c.quit_driver()
