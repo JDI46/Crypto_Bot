@@ -20,5 +20,5 @@ import time
 #     #also needs to have a sleep time in order to have enough time to find the words
 #     def search_words(self):
 #         pass
-print(Driver())
+Driver()
 
