@@ -24,7 +24,7 @@ class Driver:
         #this is hardcoded due to me getting errors from creating and element on the get title call at the bottom
         #I only want to use youtube for my research question
         try:
-            self.driver.get("https://www.youtube.com/")
+            self.driver.get("https://coinmarketcap.com/")
             time.sleep(10)
         except:
             raise Exception("Sleep didn't work")
