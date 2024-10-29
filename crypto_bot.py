@@ -1,29 +1,34 @@
 from driver_module import Driver
+
 import asyncio
+import time
 
-class HTML:
-    def __init__():
+page_html = True
+bitcoin = True
+etherium = True
+tether = True
+get_hourly_updates = True
+Driver()
+Driver.
+
+#finds trend for bitcoin
+def trend_1():
+     
+       
+#finds trend for etherium
+def trend_2():
+        pass
+#finds trend
+def trend_3():
         pass
 
-    def base_html():
-        pass
-
-
-class Bot:
-    data = {}
-    def __init__(self):
-        self.start_driver = Driver()
-    
-
-    def trend_1(self):
-        for i in self.start_driver():
-
-
-    def trend_2(self):
-        pass
-
-    def trend_3(self):
-        pass
+#stores trends hourly
+def store_trends_hourly():
+     hourly_trends = {{trend_1} = [], {trend_2} = [], {trend_3} = []}
 
 def calculate_trends():
     pass
+
+
+def call_functions():
+     pass
