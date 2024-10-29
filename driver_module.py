@@ -8,34 +8,40 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 import time
 
+
 #maybe i need to add object functions to the whole driver then access the methods in a different module, then mutli thread it or async
-class Driver:
-    def __init__(self):
-        self.driver = webdriver.Chrome()
 
 
-    def start_driver(self):
-        if self.driver:
-            return self.driver
-        else:
-            raise ValueError("Driver doesn't work")
+# if driver:
+#     print(driver)
+# else:
+#     raise ValueError("Driver doesn't work")
 
-    def get_website(self):
-        #this is hardcoded due to me getting errors from creating and element on the get title call at the bottom
-        #I only want to use youtube for my research question
-        try:
-            self.driver.get("https://coinmarketcap.com/")
-            time.sleep(10)
-        except:
-            raise Exception("Sleep didn't work")
+
+#         #this is hardcoded due to me getting errors from creating and element on the get title call at the bottom
+#         #I only want to use youtube for my research question
+# try:
+#     time.sleep(10)
+# except:
+#     raise Exception("Sleep didn't work")
 
             
 
-    def quit_driver(self):
-        return self.driver.quit()
+    
+
+def web_driver(web, driver):
+    
+    while driver:
+        if web != driver:
+            break
+        else:
+            time.sleep(10)
+            return web
 
 
-c = Driver()
-c.start_driver()
-c.get_website()
-c.quit_driver()
+
+driver = webdriver.Chrome()
+website = driver.get("https://coinmarketcap.com/")
+driver.quit()
+
+web_driver(website, driver=True)
