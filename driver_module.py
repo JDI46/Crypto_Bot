@@ -1,4 +1,5 @@
 ###after I figure out the search words class, take line 6, 7, 8 and make a different python then import the driver as a module
+from bs4 import BeautifulSoup 
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
