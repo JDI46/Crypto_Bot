@@ -40,7 +40,25 @@ def web_driver(web, driver):
             return web
 
 
+def website_html():
+    pass
 
+
+
+class Parser:
+    pass
+
+
+
+class Storage:
+    pass
+
+
+class Update:
+    pass
+
+
+soup = BeautifulSoup(html_doc, 'html.parser')
 driver = webdriver.Chrome()
 website = driver.get("https://coinmarketcap.com/")
 driver.quit()
