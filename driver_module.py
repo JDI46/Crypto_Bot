@@ -35,14 +35,12 @@ def web_driver(web, driver):
             time.sleep(10)
             driver.quit()
             break
+
         return web, driver
 
     
         
             
-            
-
-
 def website_html():
     pass
 
