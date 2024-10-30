@@ -31,13 +31,16 @@ import time
     
 
 def web_driver(web, driver):
-    
-    while driver:
-        if web != driver:
-            break
-        else:
+        while driver:
             time.sleep(10)
-            return web
+            driver.quit()
+            break
+        return web, driver
+
+    
+        
+            
+            
 
 
 def website_html():
@@ -58,9 +61,7 @@ class Update:
     pass
 
 
-soup = BeautifulSoup(html_doc, 'html.parser')
+# soup = BeautifulSoup(html_doc, 'html.parser')
 driver = webdriver.Chrome()
 website = driver.get("https://coinmarketcap.com/")
-driver.quit()
-
-web_driver(website, driver=True)
+web_driver(website, driver)

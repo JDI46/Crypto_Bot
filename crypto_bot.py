@@ -9,11 +9,11 @@ etherium = True
 tether = True
 get_hourly_updates = True
 Driver()
-Driver.
+
 
 #finds trend for bitcoin
 def trend_1():
-     
+     pass
        
 #finds trend for etherium
 def trend_2():
@@ -24,7 +24,7 @@ def trend_3():
 
 #stores trends hourly
 def store_trends_hourly():
-     hourly_trends = {{trend_1} = [], {trend_2} = [], {trend_3} = []}
+     hourly_trends = {trend_1} = [], {trend_2} = [], {trend_3} = []
 
 def calculate_trends():
     pass
