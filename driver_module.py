@@ -30,19 +30,22 @@ def website_html():
         for i in element:
             i = element.send_keys("google")
             break
-        return i, element.click()
+        return i, element.click(i)
             
 
 
 
 
-class Parser:
-    pass
+class HTML:
+    def find_html():
+         pass
 
 
 
-class Storage:
-    pass
+class SyntaxList:
+    selenium_syntax = {}
+    javascript_syntax = {}
+    go_syntax = {}
 
 
 class Update:

@@ -1,34 +1,11 @@
-from driver_module import Driver
-
-import asyncio
+from bs4 import BeautifulSoup 
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.common.by import By
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.support.ui import Select
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.wait import WebDriverWait
 import time
 
-page_html = True
-bitcoin = True
-etherium = True
-tether = True
-get_hourly_updates = True
-Driver()
-
-
-#finds trend for bitcoin
-def trend_1():
-     pass
-       
-#finds trend for etherium
-def trend_2():
-        pass
-#finds trend
-def trend_3():
-        pass
-
-#stores trends hourly
-def store_trends_hourly():
-     hourly_trends = {trend_1} = [], {trend_2} = [], {trend_3} = []
-
-def calculate_trends():
-    pass
-
-
-def call_functions():
-     pass
